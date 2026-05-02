@@ -4,6 +4,7 @@ export type Work = {
     sub: string;
     desc: string;
     images: string[];
+    videoUrls?: string[];
   };
   
   export const works: Work[] = [
@@ -27,6 +28,7 @@ export type Work = {
       sub: "VISUAL IDENTITY — 2025",
       desc: "VISUAL IDENTITY\nCLIENT NAME — 2025",
       images: [],
+      videoUrls: ["https://www.youtube.com/embed/vOgdiKAgqLM", "https://www.youtube.com/embed/mTdYpVVSOq8",],
     },
     {
       id: 4,

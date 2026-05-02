@@ -10,15 +10,24 @@ export default function WorkPage() {
       <div style={styles.container}>
         <span style={styles.back} onClick={() => setSelected(null)}>← BACK</span>
 
-        {selected.images.length > 0 ? (
-          selected.images.map((src, i) => (
+        {selected.images.length > 0 && (
+        selected.images.map((src, i) => (
             <div key={i} style={styles.detailImg}>
-              <img src={src} alt="" style={{ width: '100%', display: 'block' }} />
+            <img src={src} alt="" style={{ width: '100%', display: 'block' }} />
             </div>
-          ))
-        ) : (
-          <div style={styles.placeholder}><span style={styles.ph}>IMAGE</span></div>
+        ))
         )}
+
+        {selected.videoUrls && selected.videoUrls.map((url, i) => (
+        <div key={i} style={styles.videoWrap}>
+            <iframe
+            src={url}
+            style={styles.video}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            />
+        </div>
+        ))}
 
         <div style={styles.detailTitle}>{selected.title}</div>
         <div style={styles.detailSub}>{selected.desc.split('\n').map((line, i) => (
@@ -50,20 +59,18 @@ export default function WorkPage() {
 }
 
 const styles: Record<string, React.CSSProperties> = {
-    container: { padding: '3rem 2rem 100px', maxWidth: 800, margin: '0 auto' },
-
-    item: { marginBottom: 48, borderBottom: '1px solid #111', paddingBottom: 48, cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center' },
+  container: { padding: '3rem 2rem 100px', maxWidth: 800, margin: '0 auto' },
+  item: { marginBottom: 48, borderBottom: '1px solid #111', paddingBottom: 48, cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center' },
   thumb: { width: '60%', aspectRatio: '1', marginBottom: 14, overflow: 'hidden', alignSelf: 'center' },
   thumbEmpty: { backgroundColor: '#0d0d0d', display: 'flex', alignItems: 'center', justifyContent: 'center' },
-
   title: { color: '#fff', fontFamily: 'monospace', fontSize: 12, letterSpacing: '1.5px', marginBottom: 4 },
   sub: { color: '#444', fontFamily: 'monospace', fontSize: 11, letterSpacing: '1.2px' },
-
   back: { color: '#444', fontFamily: 'monospace', fontSize: 11, letterSpacing: '1.5px', marginBottom: 32, display: 'inline-block', cursor: 'pointer' },
-  detailImg: { width: '60%', marginBottom: 16 },
+  detailImg: { width: '60%', marginBottom: 16, margin: '0 auto 16px' },
   detailTitle: { color: '#fff', fontFamily: 'monospace', fontSize: 12, letterSpacing: '1.5px', marginTop: 24, marginBottom: 8 },
   detailSub: { color: '#444', fontFamily: 'monospace', fontSize: 11, letterSpacing: '1.2px', lineHeight: '20px' },
-
   placeholder: { width: '60%', aspectRatio: '1', backgroundColor: '#0d0d0d', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16 },
   ph: { color: '#2a2a2a', fontFamily: 'monospace', fontSize: 11, letterSpacing: '2px' },
+  videoWrap: { width: '100%', maxWidth: 600, aspectRatio: '16/9', margin: '0 auto 24px' },
+  video: { width: '100%', height: '100%', border: 'none' },
 };
