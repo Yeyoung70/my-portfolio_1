@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import WorkPage from './pages/Work';
 import InfoPage from './pages/Info';
+import './App.css';
 
 type Page = 'work' | 'info';
 
@@ -9,7 +10,7 @@ export default function App() {
 
   return (
     <div style={styles.root}>
-      <div style={styles.content}>
+      <div key={page} className="page-fade" style={styles.content}>
         {page === 'work' ? <WorkPage /> : <InfoPage />}
       </div>
 
@@ -45,7 +46,7 @@ const styles: Record<string, React.CSSProperties> = {
     zIndex: 100,
   },
   navLink: {
-    fontFamily: 'monospace',
+    fontFamily: "'IBM Plex Mono', monospace",
     fontSize: 14,
     letterSpacing: '1.5px',
     cursor: 'pointer',
