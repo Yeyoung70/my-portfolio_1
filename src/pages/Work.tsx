@@ -52,8 +52,8 @@ export default function WorkPage() {
 const styles: Record<string, React.CSSProperties> = {
     container: { padding: '3rem 2rem 100px', maxWidth: 800, margin: '0 auto' },
 
-  item: { marginBottom: 48, borderBottom: '1px solid #111', paddingBottom: 48, cursor: 'pointer' },
-  thumb: { width: '60%', aspectRatio: '1', marginBottom: 14, overflow: 'hidden' },
+    item: { marginBottom: 48, borderBottom: '1px solid #111', paddingBottom: 48, cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center' },
+  thumb: { width: '60%', aspectRatio: '1', marginBottom: 14, overflow: 'hidden', alignSelf: 'center' },
   thumbEmpty: { backgroundColor: '#0d0d0d', display: 'flex', alignItems: 'center', justifyContent: 'center' },
 
   title: { color: '#fff', fontFamily: 'monospace', fontSize: 12, letterSpacing: '1.5px', marginBottom: 4 },

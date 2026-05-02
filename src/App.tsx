@@ -18,7 +18,7 @@ export default function App() {
           style={{ ...styles.navLink, color: page === 'work' ? '#fff' : '#444' }}
           onClick={() => setPage('work')}
         >
-          YOUR NAME
+          Yeyoung Lee
         </span>
         <span
           style={{ ...styles.navLink, color: page === 'info' ? '#fff' : '#444' }}

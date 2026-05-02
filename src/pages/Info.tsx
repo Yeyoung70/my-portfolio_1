@@ -10,10 +10,10 @@ export default function InfoPage() {
           </div>
   
           <div>
-            <div style={styles.name}>YOUR NAME</div>
+            <div style={styles.name}>Yeyoung Lee</div>
             <div style={styles.contact}>
-              <a href="mailto:your@email.com" style={styles.link}>YOUR@EMAIL.COM</a>
-              <a href="https://instagram.com/yourhandle" target="_blank" style={styles.link}>INSTAGRAM</a>
+              <a href="mailto:your@email.com" style={styles.link}>doqhd2@gmail.com</a>
+              <a href="https://www.instagram.com/__yeyoun/" target="_blank" style={styles.link}>INSTAGRAM</a>
             </div>
   
             <div style={styles.bio}>
@@ -44,14 +44,23 @@ export default function InfoPage() {
   
   const styles: Record<string, React.CSSProperties> = {
     container: { padding: '3rem 2rem 100px' },
-    wrap: { display: 'grid', gridTemplateColumns: '260px 1fr', gap: '5rem', maxWidth: 780 },
+    wrap: {
+        display: 'grid',
+        gridTemplateColumns: '1fr',
+        gap: '2rem',
+        maxWidth: 500,
+      },
   
-    photo: {
-      width: '100%', aspectRatio: '1',
-      backgroundColor: '#0d0d0d',
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
-      marginBottom: 28, overflow: 'hidden',
-    },
+      photo: {
+        width: '100%',
+        aspectRatio: '1',
+        backgroundColor: '#0d0d0d',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 28,
+        overflow: 'hidden',
+      },
     ph: { color: '#2a2a2a', fontFamily: 'monospace', fontSize: 11, letterSpacing: '2px' },
   
     name: { color: '#fff', fontFamily: 'monospace', fontSize: 13, letterSpacing: '1.5px', marginBottom: 8 },
