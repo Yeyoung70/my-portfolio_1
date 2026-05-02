@@ -43,7 +43,7 @@ export default function InfoPage() {
   }
   
   const styles: Record<string, React.CSSProperties> = {
-    container: { padding: '3rem 2rem 100px' },
+    container: { padding: '3rem 2rem 100px', maxWidth: 500, margin: '0 auto' },
     wrap: {
         display: 'grid',
         gridTemplateColumns: '1fr',
