@@ -16,7 +16,8 @@ export type Work = {
       title: "PROJECT TITLE ONE",
       sub: "ART DIRECTION & DESIGN — 2026",
       desc: "ART DIRECTION & DESIGN\nCLIENT NAME — 2026",
-      images: ['/images/project1_1.jpg', '/images/project1_2.jpg'],
+      images: [],
+      videoUrls: ["https://www.youtube.com/embed/jrIul78zUEg",],
       category: 'film',
     },
     {
@@ -25,6 +26,7 @@ export type Work = {
       sub: "TYPOGRAPHY & IMAGE MAKING — 2025",
       desc: "TYPOGRAPHY & IMAGE MAKING\nCLIENT NAME — 2025",
       images: ['/images/project2_1.jpg'],
+      videoUrls: ["https://www.youtube.com/embed/oI9RF6k-xiA", "https://www.youtube.com/embed/sTL2CfhAZ1w",],
       category: 'direction',
     },
     {
@@ -33,7 +35,7 @@ export type Work = {
       sub: "VISUAL IDENTITY — 2025",
       desc: "VISUAL IDENTITY\nCLIENT NAME — 2025",
       images: [],
-      videoUrls: ["https://www.youtube.com/embed/vOgdiKAgqLM", "https://www.youtube.com/embed/mTdYpVVSOq8",],
+      videoUrls: ["https://www.youtube.com/embed/jrIul78zUEg", "https://www.youtube.com/embed/vOgdiKAgqLM", "https://www.youtube.com/embed/mTdYpVVSOq8", ],
       category: 'film',
     },
     {
