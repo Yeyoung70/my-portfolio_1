@@ -1,4 +1,4 @@
-export type Category = 'all' | 'film' | 'planning' | 'brand';
+export type Category = 'all' | 'film' | 'direction' | 'brand';
 
 export type Work = {
     id: number;
@@ -25,7 +25,7 @@ export type Work = {
       sub: "TYPOGRAPHY & IMAGE MAKING — 2025",
       desc: "TYPOGRAPHY & IMAGE MAKING\nCLIENT NAME — 2025",
       images: ['/images/project2_1.jpg'],
-      category: 'planning',
+      category: 'direction',
     },
     {
       id: 3,

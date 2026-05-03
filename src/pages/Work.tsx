@@ -5,7 +5,7 @@ import type { Work, Category } from '../data/works';
 const categories: { label: string; value: Category }[] = [
   { label: 'ALL', value: 'all' },
   { label: 'FILM', value: 'film' },
-  { label: 'PLANNING', value: 'planning' },
+  { label: 'DERECTION', value: 'direction' },
   { label: 'BRAND', value: 'brand' },
 ];
 
